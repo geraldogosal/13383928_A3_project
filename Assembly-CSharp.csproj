@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\LevelGenerator.cs" />
     <Compile Include="Assets\Scripts\Music.cs" />
+    <Compile Include="Assets\Scripts\PacmanManager.cs" />
     <Compile Include="Assets\Scripts\SpritesManager.cs" />
     <Compile Include="Assets\Scripts\Tween.cs" />
     <Compile Include="Assets\Scripts\Tweener.cs" />
