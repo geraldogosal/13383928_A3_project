@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO.MemoryMappedFiles;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -17,31 +18,35 @@ public class PacmanManager : MonoBehaviour
         tweener = GetComponent<Tweener>();
         itemList = new List<GameObject>();
         itemList.Add(item);
-        pastPosition = item.transform.position;
+        //pastPosition = item.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        pastPosition = item.transform.position;
+        //pastPosition = item.transform.position;
         if (item.transform.position == new Vector3(1.0f, -1.0f, 0.0f))
         {
             AddTween(new Vector3(6.0f, -1.0f, 0.0f), 1.5f);
+            invertChecker(item);
         }
 
         else if (item.transform.position == new Vector3(6.0f, -1.0f, 0.0f))
         {
             AddTween(new Vector3(6.0f, -5.0f, 0.0f), 1.5f);
+           
         }
 
         else if (item.transform.position == new Vector3(6.0f, -5.0f, 0.0f))
         {
             AddTween(new Vector3(1.0f, -5.0f, 0.0f), 1.5f);
+            invertChecker(item);
         }
 
         else if (item.transform.position == new Vector3(1.0f, -5.0f, 0.0f))
         {
             AddTween(new Vector3(1.0f, -1.0f, 0.0f), 1.5f);
+        
         }
     }
     private void AddTween(Vector3 endPosition, float duration)
@@ -56,4 +61,23 @@ public class PacmanManager : MonoBehaviour
             }
         }
     }
+  
+
+    private void inverted(GameObject item)
+    {
+        item.transform.localScale = new Vector3(transform.localScale.x * -1f, transform.localScale.y, transform.localScale.z);
+    }
+
+    private void invertChecker(GameObject item)
+    {
+        if (item.transform.localScale.x > 0)
+        {
+            inverted(item);
+        }
+        else if (item.transform.localScale.x < 0)
+        {
+            inverted(item);
+        }
+    }
+
 }
