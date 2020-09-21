@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: a420a5dd5dc153b42afec1a7f2cf1687
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Pacman: {fileID: 1411839131279519472, guid: e090cf81729b22442acf1455c8270660,
+      type: 3}
+  - GhostBlue: {instanceID: 0}
+  - GhostRed: {instanceID: 0}
+  - GhostPurple: {instanceID: 0}
+  - GhostOrange: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

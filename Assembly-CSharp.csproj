@@ -63,7 +63,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\LevelGenerator.cs" />
+    <Compile Include="Assets\Scripts\Music.cs" />
+    <Compile Include="Assets\Scripts\SpritesManager.cs" />
+    <Compile Include="Assets\Scripts\Tween.cs" />
+    <Compile Include="Assets\Scripts\Tweener.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/geral/Documents/GitHub/13383928_A3_project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
