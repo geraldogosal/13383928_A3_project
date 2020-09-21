@@ -12,12 +12,14 @@ public class PacmanManager : MonoBehaviour
     private List<GameObject> itemList;
     [SerializeField] GameObject item;
     private Vector3 pastPosition;
+    Quaternion startRotation;
     // Start is called before the first frame update
     void Start()
     {
         tweener = GetComponent<Tweener>();
         itemList = new List<GameObject>();
         itemList.Add(item);
+        startRotation = item.transform.rotation;
         //pastPosition = item.transform.position;
     }
 
@@ -28,25 +30,28 @@ public class PacmanManager : MonoBehaviour
         if (item.transform.position == new Vector3(1.0f, -1.0f, 0.0f))
         {
             AddTween(new Vector3(6.0f, -1.0f, 0.0f), 1.5f);
-            invertChecker(item);
+            //invertChecker(item);
+            rotation(item, "right");
         }
 
         else if (item.transform.position == new Vector3(6.0f, -1.0f, 0.0f))
         {
             AddTween(new Vector3(6.0f, -5.0f, 0.0f), 1.5f);
-           
+            rotation(item, "down");
         }
 
         else if (item.transform.position == new Vector3(6.0f, -5.0f, 0.0f))
         {
             AddTween(new Vector3(1.0f, -5.0f, 0.0f), 1.5f);
-            invertChecker(item);
+            //invertChecker(item);
+            rotation(item, "left");
         }
+
 
         else if (item.transform.position == new Vector3(1.0f, -5.0f, 0.0f))
         {
             AddTween(new Vector3(1.0f, -1.0f, 0.0f), 1.5f);
-        
+            rotation(item, "up");
         }
     }
     private void AddTween(Vector3 endPosition, float duration)
@@ -61,9 +66,9 @@ public class PacmanManager : MonoBehaviour
             }
         }
     }
-  
 
-    private void inverted(GameObject item)
+
+    /*private void inverted(GameObject item)
     {
         item.transform.localScale = new Vector3(transform.localScale.x * -1f, transform.localScale.y, transform.localScale.z);
     }
@@ -77,6 +82,36 @@ public class PacmanManager : MonoBehaviour
         else if (item.transform.localScale.x < 0)
         {
             inverted(item);
+        }
+    }*/
+
+    private void rotation(GameObject item, string type)
+    {
+        if (type == "right")
+        {
+
+            item.transform.rotation = startRotation;
+
+        }
+        else if (type == "down")
+        {
+            item.transform.rotation = startRotation;
+
+            item.transform.Rotate(0, 0, 270);
+
+
+        }
+        else if (type == "left")
+        {
+            item.transform.rotation = startRotation;
+
+            item.transform.Rotate(180, 0, 180);
+        }
+        else if (type == "up")
+        {
+            item.transform.rotation = startRotation;
+
+            item.transform.Rotate(0, 0, 90);
         }
     }
 
