@@ -6,7 +6,8 @@ MonoImporter:
   defaultReferences:
   - Pacman: {fileID: 1411839131279519472, guid: e090cf81729b22442acf1455c8270660,
       type: 3}
-  - GhostBlue: {instanceID: 0}
+  - GhostBlue: {fileID: 5192309055606702897, guid: 8bf4178dd6ab0e14dabf12a351f93066,
+      type: 3}
   - GhostRed: {instanceID: 0}
   - GhostPurple: {instanceID: 0}
   - GhostOrange: {instanceID: 0}

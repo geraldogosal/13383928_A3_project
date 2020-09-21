@@ -234,10 +234,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pacman: {fileID: 1411839131279519472, guid: e090cf81729b22442acf1455c8270660, type: 3}
-  GhostBlue: {fileID: 0}
-  GhostRed: {fileID: 0}
-  GhostPurple: {fileID: 0}
-  GhostOrange: {fileID: 0}
+  GhostBlue: {fileID: 3445631015674950531, guid: 8bf4178dd6ab0e14dabf12a351f93066,
+    type: 3}
+  GhostRed: {fileID: 2736727648405572016, guid: 153f86d111c9651498fed503d86a6be4,
+    type: 3}
+  GhostPurple: {fileID: 7850724488078558732, guid: 54eddecbed7ee534299c87901b693e03,
+    type: 3}
+  GhostOrange: {fileID: 1781389522235909995, guid: 87883d01ed47cbf4a94b84aa8486105c,
+    type: 3}
 --- !u!4 &906710858
 Transform:
   m_ObjectHideFlags: 0
